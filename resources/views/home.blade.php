@@ -2,6 +2,6 @@
 @extends('layout')
 @section('content')
 
-<img style="width:100%" class="hotel_foto" src="acessets/hotel_footo.jpg">
+<img style="height:100%;display:flex;" class="hotel_foto" src="acessets/hotel_footo.jpg">
 
 @endsection
