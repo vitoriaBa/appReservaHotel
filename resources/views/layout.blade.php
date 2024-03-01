@@ -40,7 +40,7 @@
            Funcionario
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{'/cadastro-cliente'}}">cadastro</a></li>
+            <li><a class="dropdown-item" href="{{'/cadastro-funcionario'}}">cadastro</a></li>
             <li><a class="dropdown-item" href="#">Pesquisa</a></li>
             
           </ul>

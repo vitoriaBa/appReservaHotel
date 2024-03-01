@@ -16,5 +16,5 @@ Route::get('/',[ClienteController::class,'showHome'])->name('home');
 Route::get('/cadastro-cliente',[ClienteController::class,'showFormularioCadastro'])->name('show-formulario-cadastro');
 Route::post('/cadastro-cliente',[ClienteController::class,'cadastrarCliente'])->name('envia-banco-cliente');
 
-Route::get('/cadastro-funcionario',[ClienteController::class,'showFormularioCadastrofuncionario'])->name('show-formulario-cadastro-funcionario');
-Route::post('/cadastro-funcionario',[ClienteController::class,'cadastrarFuncionario'])->name('envia-banco-funcionario');
+Route::get('/cadastro-funcionario',[FuncionarioController::class,'showFormularioCadastrofuncionario'])->name('show-formulario-cadastro-funcionario');
+Route::post('/cadastro-funcionario',[FuncionarioController::class,'cadastrarFuncionario'])->name('envia-banco-funcionario');
