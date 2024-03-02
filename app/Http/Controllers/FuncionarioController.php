@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 //talves funcionario
+//use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\Controller;
+
 use App\Models\Funcionario;
 
 class FuncionarioController extends Controller
@@ -28,7 +30,7 @@ class FuncionarioController extends Controller
            ]);
           // dd($dadosValidos);
      
-      Cliente::create($dadosValidos);
+      Funcionario::create($dadosValidos);
       return Redirect::route('home');
          }
 }

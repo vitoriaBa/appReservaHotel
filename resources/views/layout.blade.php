@@ -22,8 +22,8 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{'/'}}">Home</a>
         </li>
+        
        
- 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Cliente
@@ -33,6 +33,22 @@
             <li><a class="dropdown-item" href="#">Pesquisa</a></li>
            
           </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Quartos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{'/cadastro-quartos'}}">cadastro</a></li>
+           
+           
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{'/cadastro-reserva'}}">Reserva</a>
         </li>
 
         <li class="nav-item dropdown">
