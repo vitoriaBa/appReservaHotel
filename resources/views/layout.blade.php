@@ -30,6 +30,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{'/cadastro-cliente'}}">cadastro</a></li>
+            <li><a class="dropdown-item"href="{{'/gerenciar-cliente'}}">Gerenciar</a></li>
             <li><a class="dropdown-item" href="#">Pesquisa</a></li>
            
           </ul>
@@ -42,7 +43,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{'/cadastro-quartos'}}">cadastro</a></li>
-           
+            <li><a class="dropdown-item"href="{{'/gerenciar-quartos'}}">Gerenciar</a></li>
            
           </ul>
         </li>
@@ -63,11 +64,9 @@
         </li>
 
 
+       
         <li class="nav-item">
-          <a class="nav-link" href="#">pesquisar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Deletar</a>
+          <a class="nav-link" href="#"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">alterar</a>

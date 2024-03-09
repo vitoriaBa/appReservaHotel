@@ -35,4 +35,9 @@ class ReservasController extends Controller
    Reservas::create($dadosValidos);
      return Redirect::route('home');
          }
+
+           
+         public function gerenciarReserva(){
+          return view("gerenciarReserva");
+        }
 }

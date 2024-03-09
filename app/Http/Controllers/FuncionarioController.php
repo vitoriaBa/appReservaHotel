@@ -33,4 +33,8 @@ class FuncionarioController extends Controller
       Funcionario::create($dadosValidos);
       return Redirect::route('home');
          }
+
+         public function gerenciarFuncionario(){
+          return view("gerenciarFuncionario");
+        }
 }

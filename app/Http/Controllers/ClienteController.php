@@ -28,4 +28,8 @@ class ClienteController extends Controller
  Cliente::create($dadosValidos);
  return Redirect::route('home');
     }
+
+    public function gerenciarCliente(){
+      return view("gerenciarCliente");
+    }
 }
