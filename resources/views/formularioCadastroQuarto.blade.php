@@ -8,7 +8,7 @@
   
     <div class="col-md-6">
     <label for="inputNumero" class="form-label">Numero:</label>
-    <input type="numeric" class="form-control" id="inputNumero" name="numero" placeholder="Paula da Silva">
+    <input type="numeric" class="form-control" id="inputNumero" name="numeroquarto">
   </div>
 
 
@@ -24,7 +24,7 @@
 
   <div class="col-md-6">
     <label for="inputvalor" class="form-label">Valor:</label>
-    <input type="numeric" class="form-control" id="inputValor" name="valor" placeholder="Paula da Silva">
+    <input type="decimal" class="form-control" id="inputValor" name="valordiaria">
   </div>
 
   <div class="col-12" style="margin-top:3%;">

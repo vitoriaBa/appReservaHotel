@@ -17,16 +17,16 @@ class QuartosController extends Controller
          }
      
          public function cadastrarQuarto(Request $request){
-          
+         
            $dadosValidos = $request->validate([
-             'numero'=> 'integer|required',
+             'numeroquarto'=> 'integer|required',
              'tipo'=>'string|required', 
-             'valor'=> 'decimal:10|required'
+             'valordiaria'=> 'numeric|required'
                        //double
            ]);
        
-     
-      Quartos::create($dadosValidos);
-      return Redirect::route('home');
+          
+     Quartos::create($dadosValidos);
+    return Redirect::route('home');
          }
 }

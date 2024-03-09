@@ -5,7 +5,7 @@
 
 <section c class="container mt-5">
 
-<form class="row g-5" method="Post" action="{{route('envia-banco-quartos')}}">
+<form class="row g-5" method="Post" action="{{route('envia-banco-reservas')}}">
   @csrf
 
   <h1>Formulario do Quarto </h1>
@@ -19,7 +19,7 @@
 
   <div class="col-md-4">
     <label for="inputNomeFuncionario" class="form-label">Nome:</label>
-    <input type="texto" class="form-control" id="inputNomeFuncionario" name="nomefuncionario">
+    <input type="texto" class="form-control" id="inputNomeFuncionario" readonly name="nomefuncionario">
   </div>
 </div>
 <div class="row">
@@ -31,7 +31,7 @@
 
   <div class="col-md-4">
     <label for="inputNomeCliente" class="form-label">Nome:</label>
-    <input type="text" class="form-control" id="inputNomeCliente name="nomecliente">
+    <input type="text" class="form-control" id="inputNomeCliente" readonly name="nomecliente">
   </div>
 
 </div>
@@ -39,7 +39,7 @@
 <div class="row">
   <div class="col-md-3">
     <label for="inputNumeroQuarto" class="form-label">Numero do Quarto:</label>
-    <input type="text" class="form-control" id="inputNumeroQuarto" name="numero">
+    <input type="text" class="form-control" id="inputNumeroQuarto" name="numeroquarto">
   </div>
 </div>
 <div class="row">
@@ -48,14 +48,14 @@
 
   <div class="col-md-4">
     <label for="inputtipo" class="form-label">Tipo:</label>
-    <input type="text" class="form-control" id="inputTipo" name="tipo">
+    <input type="text" class="form-control" id="inputTipo" readonly name="tipo">
 
   </div>
 </div>
 <div class="row"> 
   <div class="col-md-4">
     <label for="inputValorDiaria" class="form-label">Valor Diaria:</label>
-    <input type="text" class="form-control" id="inputValorDiaria" readonly name="valor">
+    <input type="text" class="form-control" id="inputValorDiaria" readonly name="valordiaria">
   </div>
 
 </div>
@@ -74,9 +74,9 @@
 </div>
 <div class="row">
   <div class="col-md-4">
-    <label for="inputtipo" class="form-label">Situação de Pagamento</label>
-    <select class="form-select" aria-label="Default select example">
-  <option value="Pentente">Pentente</option>
+    <label for="inputtipo"  class="form-label">Situação de Pagamento</label>
+    <select class="form-select" name="situacao" aria-label="Default select example">
+  <option value="Pendente">Pentente</option>
   <option value="Pago">Pago</option>
  
 </select>
@@ -84,7 +84,7 @@
 
   <div class="col-md-4">
     <label for="inputValorTotal" class="form-label">Valor Total</label>
-    <input type="text" class="form-control" id="inputValorTotal"  name="valortotal">
+    <input type="text" class="form-control" id="inputValorTotal"   name="valortotal">
   </div>
 
 </div>

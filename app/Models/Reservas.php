@@ -11,10 +11,11 @@ class Reservas extends Model
     protected $fillable = [
         'idcliente',
         'idfuncionario',
-        'idquarto',
+        'numeroquarto',
         'situacao',
-        'valortotal'
-        'datasaida',
-        'dataentrada'
+        'valortotal',
+        'dataentrada',
+        'datasaida'
+      
     ];
 }

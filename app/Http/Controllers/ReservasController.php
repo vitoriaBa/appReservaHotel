@@ -18,20 +18,21 @@ class ReservasController extends Controller
          }
      
          public function cadastrarReserva(Request $request){
-         
+        //  dd($request);
            $dadosValidos = $request->validate([
              'idcliente'=> 'integer|required',
              'idfuncionario'=>'integer|required', 
-             'idquarto'=> 'integer|required',
+             'numeroquarto'=> 'integer|required',
              'situacao'=> 'string|required',
-             'valortotal'=> 'string|required',
-             'datasaida'=> 'string|required',
-             'dataentrada'=> 'string|required',
+             'valortotal'=> 'numeric|required',
+             'dataentrada'=> 'date|required',
+             'datasaida'=> 'date|required',
+             
              
            ]);
           
-     //ver certinho depois da errrado pegar de alguem
-      Reservas::create($dadosValidos);
-      return Redirect::route('home');
+          // dd($dadosValidos);
+   Reservas::create($dadosValidos);
+     return Redirect::route('home');
          }
 }

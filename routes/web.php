@@ -30,7 +30,7 @@ Route::get('/cadastro-quartos',[QuartosController::class,'showFormularioCadastro
 Route::post('/cadastro-quartos',[QuartosController::class,'cadastrarQuarto'])->name('envia-banco-quartos');
 
 //talves tenha que tirar
-Route::get('/',[ReservasController::class,'showHome'])->name('home');
+//Route::get('/',[ReservasController::class,'showHome'])->name('home');
 Route::get('/cadastro-reserva',[ReservasController::class,'showFormularioCadastroReserva'])->name('show-formulario-cadastro-reserva');
 Route::post('/cadastro-reserva',[ReservasController::class,'cadastrarReserva'])->name('envia-banco-reservas');
 
