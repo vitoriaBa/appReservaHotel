@@ -6,7 +6,8 @@
 <section class="container m-5">
   <h1 class='text-center'>Gerenciar dados do Cliente</h1>
   <div class="container m-5">
-    <form >
+
+    <form method='get' action="{{route('gerenciar-cliente')}}">
 
     @csrf
 
@@ -26,27 +27,34 @@
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
+        <th scope="col">Telefone</th>
         <th scope="col">Editar</th>
         <th scope="col">Excluir</th>
       </tr>
     </thead>
     <tbody>
-     
+     @foreach($registrosClientes  as  $registrosClientesLoop )
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
-        <td>
-          <a href="">
-            <button type="button" class="btn btn-primary">X</button>
-          </a>
-        </td>
+        <th scope="row">{{$registrosClientesLoop->id}}</th>
+        <td>{{$registrosClientesLoop->nome}}</td>
+        <td>{{$registrosClientesLoop->email}}</td>
+        <td>{{$registrosClientesLoop->fone}}</td>
       
         <td>
-         xxx
+          <a href="">
+            <button type="button" class="btn btn-primary">:)</button>
+          </a>
+        </td>
+        <td>
+          <form method='POST'action="{{route('apaga-cliente',$registrosClientesLoop->id')}}">
+            @method('delete')
+            @csrf
+            <button type="button" class="btn btn-primary">:(</button>
+               
+        </form>
         </td>
       </tr>
-   
+   @endforeach
     </tbody>
   </table>
 </section>

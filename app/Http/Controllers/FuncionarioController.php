@@ -15,7 +15,7 @@ class FuncionarioController extends Controller
     public function showHome(){
         return view("home");
          }
-                         //ou showFormularioCadastro
+                      
         public function showFormularioCadastroFuncionario(Request $request){
      
             return view("formularioCadastroFuncionario");

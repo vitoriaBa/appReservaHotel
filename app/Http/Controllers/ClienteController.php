@@ -28,8 +28,39 @@ class ClienteController extends Controller
  Cliente::create($dadosValidos);
  return Redirect::route('home');
     }
+    //um cliente
+    public function mostrarGerenciarClienteId(Cliente $id){
+                                                  
+      return view("xxx",['registrosClientes' => $id]);
+    }
 
-    public function gerenciarCliente(){
-      return view("gerenciarCliente");
+
+    //todos os clintes 
+    public function gerenciarCliente( Request $request){
+      $dadosCliente = Cliente::query();
+      $dadosCliente->when($request->nome,function($query,$valor){
+        $query->where('nome','like','%'.$valor.'%');
+      });
+      $dadosCliente = $dadosCliente ->get();
+                                                            //$idCliente
+      return view('gerenciarCliente',['registrosClientes' => $dadosCliente]);
+    }
+    //deletar
+    public function destroy(Cliente $id){
+     $id -> delete();
+     return Redirect::route('home');
+    }
+
+    public function alterarClienteBanco(Cliente $id, Request $request){
+      
+      $dadosValidos = $request->validate([
+        'nome'=> 'string|required',
+        'email'=>'string|required', 
+        'fone'=> 'string|required'
+      ]);
+      //organizar antes de enviar para o banco
+      $id->fill($dadosValidos);
+      $id->save();
+      return Redirect::route('home');
     }
 }

@@ -12,7 +12,6 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\FuncionarioController' => $baseDir . '/app/Http/Controllers/FuncionarioController.php',
     'App\\Http\\Controllers\\QuartosController' => $baseDir . '/app/Http/Controllers/QuartosController.php',
-    'App\\Http\\Controllers\\ReservaController' => $baseDir . '/app/Http/Controllers/ReservaController.php',
     'App\\Http\\Controllers\\ReservasController' => $baseDir . '/app/Http/Controllers/ReservasController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

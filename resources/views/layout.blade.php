@@ -48,9 +48,24 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{'/cadastro-reserva'}}">Reserva</a>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Reserva
+          </a>
+          <ul class="dropdown-menu">
+            <li>     <a class="nav-link" href="{{'/cadastro-reserva'}}">Reserva</a></li>
+            <li><a class="dropdown-item"href="{{'/gerenciar-reserva'}}">Gerenciar</a></li>
+           
+          </ul>
         </li>
+
+
+
+
+
+
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,6 +73,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{'/cadastro-funcionario'}}">cadastro</a></li>
+            <li><a class="dropdown-item"href="{{'/gerenciar-funcionario'}}">Gerenciar</a></li>
             <li><a class="dropdown-item" href="#">Pesquisa</a></li>
             
           </ul>
