@@ -17,20 +17,37 @@ Route::put('/altera-cliente/{id}',[ClienteController::class,'alterarClienteBanco
 Route::delete('/apaga-cliente/{id}',[ClienteController::class,'destroy'])->name('apaga-cliente');
 
 
+
+
+
 //Funcionario
 Route::get('/cadastro-funcionario',[FuncionarioController::class,'showFormularioCadastrofuncionario'])->name('show-formulario-cadastro-funcionario');
 Route::post('/cadastro-funcionario',[FuncionarioController::class,'cadastrarFuncionario'])->name('envia-banco-funcionario');
 Route::get('/gerenciar-funcionario',[FuncionarioController::class,'gerenciarFuncionario'])->name('gerenciar-funcionario');
-//sem professor
+
+Route::get('/altera-funcionario',[FuncionarioController::class,'mostrarGerenciarFuncionarioId'])->name('mostrar-funcionario');
+Route::put('/altera-funcionario/{id}',[FuncionarioController::class,'alterarFuncionarioBanco'])->name('alterar-funcionario');
+Route::delete('/apaga-funcionario/{id}',[FuncionarioController::class,'destroy'])->name('apaga-funcionario');
+
 
 //quartos
 Route::get('/cadastro-quartos',[QuartosController::class,'showFormularioCadastroQuarto'])->name('show-formulario-cadastro-quarto');
 Route::post('/cadastro-quartos',[QuartosController::class,'cadastrarQuarto'])->name('envia-banco-quartos');
 Route::get('/gerenciar-quartos',[QuartosController::class,'gerenciarQuarto'])->name('gerenciar-quartos');
 
-//talves tenha que tirar
+Route::get('/altera-quartos',[QuartosController::class,'mostrarGerenciarQuartosId'])->name('mostrar-quartos');
+Route::put('/altera-quartos/{id}',[QuartosController::class,'alterarQuartosBanco'])->name('alterar-quartos');
+Route::delete('/apaga-quartos/{id}',[QuartosController::class,'destroy'])->name('apaga-quartos');
+
+
+
 //Reserva
 Route::get('/cadastro-reserva',[ReservasController::class,'showFormularioCadastroReserva'])->name('show-formulario-cadastro-reserva');
 Route::post('/cadastro-reserva',[ReservasController::class,'cadastrarReserva'])->name('envia-banco-reservas');
 Route::get('/gerenciar-reserva',[ReservasController::class,'gerenciarReserva'])->name('gerenciar-reserva');
+
+
+Route::get('/altera-reserva',[ReservasController::class,'mostrarGerenciarReservaId'])->name('mostrar-reserva');
+Route::put('/altera-reserva/{id}',[ReservasController::class,'alterarReservaBanco'])->name('alterar-reserva');
+Route::delete('/apaga-reserva/{id}',[ReservasController::class,'destroy'])->name('apaga-reserva');
 //

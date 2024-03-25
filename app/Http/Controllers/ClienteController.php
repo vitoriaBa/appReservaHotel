@@ -28,6 +28,7 @@ class ClienteController extends Controller
  Cliente::create($dadosValidos);
  return Redirect::route('home');
     }
+    
     //um cliente
     public function mostrarGerenciarClienteId(Cliente $id){
                                                   
@@ -38,6 +39,7 @@ class ClienteController extends Controller
     //todos os clintes 
     public function gerenciarCliente( Request $request){
       $dadosCliente = Cliente::query();
+
       $dadosCliente->when($request->nome,function($query,$valor){
         $query->where('nome','like','%'.$valor.'%');
       });
@@ -47,7 +49,7 @@ class ClienteController extends Controller
     }
     //deletar
     public function destroy(Cliente $id){
-     $id -> delete();
+     $id->delete();
      return Redirect::route('home');
     }
 

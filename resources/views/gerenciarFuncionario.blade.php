@@ -18,7 +18,7 @@
           <button type="submit" class="btn btn-info">pesquisar</button>
         </div>
       </div>
-    </form>
+      <form method='get' action="{{route('gerenciar-funcionario')}}">
   </div>
   <table class="table">
     <thead>
@@ -31,22 +31,28 @@
       </tr>
     </thead>
     <tbody>
-     
+    @foreach($registrosFuncionarios  as  $registrosFuncionariosLoop)
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosFuncionariosLoop->id}}</th>
+        <td>{{$registrosFuncionariosLoop->id}}</td>
+        <td>{{$registrosFuncionariosLoop->nome}}</td>
+        <td>{{$registrosFuncionariosLoop->funcao}}</td>
+      
         <td>
           <a href="">
-            <button type="button" class="btn btn-primary">X</button>
+            <button type="button" class="btn btn-primary">O</button>
           </a>
         </td>
-        xx
         <td>
-         xxx
+          <form method='post'action="{{route('apaga-funcionario',$registrosFuncionariosLoop->id)}}">
+       @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-primary">X</button>
+               
+        </form>
         </td>
       </tr>
-   
+      @endforeach
     </tbody>
   </table>
 </section>
