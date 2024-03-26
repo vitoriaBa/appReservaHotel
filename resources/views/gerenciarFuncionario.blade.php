@@ -6,7 +6,7 @@
 <section class="container m-5">
 <h1 class='text-center'>Gerenciar dados do Funcionario</h1>
   <div class="container m-5">
-    <form >
+  <form method='get' action="{{route('gerenciar-funcionario')}}">
 
     @csrf
 
@@ -18,7 +18,7 @@
           <button type="submit" class="btn btn-info">pesquisar</button>
         </div>
       </div>
-      <form method='get' action="{{route('gerenciar-funcionario')}}">
+</form>
   </div>
   <table class="table">
     <thead>
@@ -31,6 +31,7 @@
       </tr>
     </thead>
     <tbody>
+   
     @foreach($registrosFuncionarios  as  $registrosFuncionariosLoop)
       <tr>
         <th scope="row">{{$registrosFuncionariosLoop->id}}</th>
@@ -40,7 +41,7 @@
       
         <td>
           <a href="">
-            <button type="button" class="btn btn-primary">O</button>
+            <button type="submit" class="btn btn-primary">O</button>
           </a>
         </td>
         <td>

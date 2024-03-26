@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-//talves funcionario
-//use App\Http\Controllers\FuncionarioController;
-use App\Http\Controllers\Controller;
-
+//use App\Http\Controllers\Controller;
 use App\Models\Funcionario;
 
 class FuncionarioController extends Controller
@@ -34,6 +31,12 @@ class FuncionarioController extends Controller
       return Redirect::route('home');
          }
 
+         public function mostrarGerenciarFuncionarioId(Funcionario $id){
+                                                  
+          return view("xxx",['registrosFuncionarios' => $id]);
+        }
+
+
          public function gerenciarFuncionario( Request $request){
           $dadosFuncionario = Funcionario::query();
     
@@ -42,7 +45,7 @@ class FuncionarioController extends Controller
           });
           $dadosFuncionario = $dadosFuncionario ->get();
                                                                 //$idFuncionario
-          return view('gerenciarFuncionario',['registrosFuncionario' => $dadosFuncionario]);
+          return view('gerenciarFuncionario',['registrosFuncionarios' => $dadosFuncionario]);
         }
         //deletar
         public function destroy(Funcionario $id){

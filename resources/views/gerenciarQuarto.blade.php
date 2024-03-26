@@ -6,7 +6,7 @@
 <section class="container m-5">
   <div class="container m-5">
   <h1 class='text-center'>Gerenciar dados do Qaurto</h1>
-    <form >
+  <form method='get' action="{{route('gerenciar-quartos')}}">
 
     @csrf
 
@@ -32,21 +32,28 @@
     </thead>
     <tbody>
      
+    @foreach($registrosQuartos  as  $registrosQuartosLoop)
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosQuartosLoop->id}}</th>
+        <td>{{$registrosQuartosLoop->id}}</td>
+        <td>{{$registrosQuartosLoop->numeroquarto}}</td>
+        <td>{{$registrosQuartosLoop->tipo}}</td>
+        <td>{{$registrosQuartosLoop->valordiaria}}</td>
+      
         <td>
           <a href="">
-            <button type="button" class="btn btn-primary">X</button>
+            <button type="submit" class="btn btn-primary">O</button>
           </a>
         </td>
-        xx
+        
         <td>
-         xxx
+        <form method='post'action="{{route('apaga-quartos',$registrosQuartosLoop->id)}}">
+       @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-primary">X</button>
         </td>
       </tr>
-   
+      @endforeach
     </tbody>
   </table>
 </section>

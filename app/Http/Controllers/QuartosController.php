@@ -30,8 +30,42 @@ class QuartosController extends Controller
     return Redirect::route('home');
          }
 
-         
-         public function gerenciarQuarto(){
-          return view("gerenciarQuarto");
+
+         public function mostrarGerenciarQuartoId(Quartos $id){
+                                                  
+          return view("xxx",['registrosQuartos' => $id]);
         }
+
+
+        
+        public function gerenciarQuarto( Request $request){
+          $dadosQuarto = Quartos::query();
+    
+          $dadosQuarto->when($request->numeroquarto,function($query,$valor){
+            $query->where('numeroquarto','like','%'.$valor.'%');
+          });
+          $dadosQuarto = $dadosQuarto ->get();
+                                                               
+          return view('gerenciarQuarto',['registrosQuartos' => $dadosQuarto]);
+        }
+        //deletar
+        public function destroy(Quartos $id){
+         $id->delete();
+         return Redirect::route('home');
+        }
+    
+        public function alterarQuartoBanco(Quartos $id, Request $request){
+          
+          $dadosValidos = $request->validate([
+            'numeroquarto'=> 'string|required',
+            'tipo'=>'string|required',
+            'valordiaria'=>'string|required',
+           
+          ]);
+          //organizar antes de enviar para o banco
+          $id->fill($dadosValidos);
+          $id->save();
+          return Redirect::route('home');
+        }
+
 }
