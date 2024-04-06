@@ -1,7 +1,7 @@
 
 @extends('layout')
 @section('content')
- 
+
 
 <section class="container m-5">
   <div class="container m-5">
@@ -35,14 +35,13 @@
     @foreach($registrosQuartos  as  $registrosQuartosLoop)
       <tr>
         <th scope="row">{{$registrosQuartosLoop->id}}</th>
-        <td>{{$registrosQuartosLoop->id}}</td>
         <td>{{$registrosQuartosLoop->numeroquarto}}</td>
         <td>{{$registrosQuartosLoop->tipo}}</td>
         <td>{{$registrosQuartosLoop->valordiaria}}</td>
       
         <td>
-          <a href="">
-            <button type="submit" class="btn btn-primary">O</button>
+        <a href="{{route('mostrar-quartos',$registrosQuartosLoop->id)}}">
+            <button type="submit" class="btn btn-primary">altera</button>
           </a>
         </td>
         

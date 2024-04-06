@@ -41,8 +41,8 @@
         <td>{{$registrosClientesLoop->fone}}</td>
       
         <td>
-          <a href="">
-            <button type="button" class="btn btn-primary">O</button>
+          <a href="{{route('mostrar-cliente',$registrosClientesLoop->id)}}">
+            <button type="submit" class="btn btn-primary">altera</button>
           </a>
         </td>
         <td>

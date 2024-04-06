@@ -35,13 +35,12 @@
     @foreach($registrosFuncionarios  as  $registrosFuncionariosLoop)
       <tr>
         <th scope="row">{{$registrosFuncionariosLoop->id}}</th>
-        <td>{{$registrosFuncionariosLoop->id}}</td>
         <td>{{$registrosFuncionariosLoop->nome}}</td>
         <td>{{$registrosFuncionariosLoop->funcao}}</td>
       
         <td>
-          <a href="">
-            <button type="submit" class="btn btn-primary">O</button>
+        <a href="{{route('mostrar-funcionario',$registrosFuncionariosLoop->id)}}">
+            <button type="submit" class="btn btn-primary">altera</button>
           </a>
         </td>
         <td>

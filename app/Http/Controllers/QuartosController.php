@@ -31,9 +31,9 @@ class QuartosController extends Controller
          }
 
 
-         public function mostrarGerenciarQuartoId(Quartos $id){
+         public function mostrarGerenciarQuartosId(Quartos $id){
                                                   
-          return view("xxx",['registrosQuartos' => $id]);
+          return view("formularioAlterarQuarto",['registrosQuartos' => $id]);
         }
 
 
@@ -54,7 +54,7 @@ class QuartosController extends Controller
          return Redirect::route('home');
         }
     
-        public function alterarQuartoBanco(Quartos $id, Request $request){
+        public function alterarQuartosBanco(Quartos $id, Request $request){
           
           $dadosValidos = $request->validate([
             'numeroquarto'=> 'string|required',

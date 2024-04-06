@@ -32,7 +32,7 @@ class ClienteController extends Controller
     //um cliente
     public function mostrarGerenciarClienteId(Cliente $id){
                                                   
-      return view("xxx",['registrosClientes' => $id]);
+      return view('formularioAlterarCliente',['registrosClientes' => $id]);
     }
 
 

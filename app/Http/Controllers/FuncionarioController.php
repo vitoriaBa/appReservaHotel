@@ -33,7 +33,7 @@ class FuncionarioController extends Controller
 
          public function mostrarGerenciarFuncionarioId(Funcionario $id){
                                                   
-          return view("xxx",['registrosFuncionarios' => $id]);
+          return view("formularioAlterarFuncionario",['registrosFuncionarios' => $id]);
         }
 
 
